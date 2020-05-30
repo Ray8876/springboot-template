@@ -1,0 +1,22 @@
+appName: demo
+
+#server
+server:
+  max-http-header-size: 1000000
+  servlet:
+    context-path: /demo
+  threads: 4
+  tomcat:
+    acceptCountg: 20
+    uri-encoding: UTF-8
+
+#spring
+spring:
+  messages:
+    encoding: UTF-8
+  profiles:
+    active: dev
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 100MB
