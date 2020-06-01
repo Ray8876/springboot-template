@@ -23,6 +23,6 @@ public interface TransactionsMapper extends BaseMapper<Transactions> {
     @Select("SELECT tr.*,cu.customer_name,cl.cloth_name FROM db1.transactions tr LEFT JOIN db1.customer cu on tr.customer_id = cu.id LEFT JOIN db1.cloth cl ON cl.id = tr.cloth_id WHERE tr.state = -1")
     IPage<Transactions> selectPageChu(IPage<Transactions> page, @Param(Constants.WRAPPER) Wrapper<Transactions> queryWrapper);
 
-    @Select("SELECT tr.*,cu.customer_name,cl.cloth_name FROM db1.transactions tr LEFT JOIN db1.customer cu on tr.customer_id = cu.id LEFT JOIN db1.cloth cl ON cl.id = tr.cloth_id WHERE tr.state = 1")
+    @Select("SELECT tr.*,su.supplier_name customer_name,cl.cloth_name FROM db1.transactions tr LEFT JOIN db1.supplier su on tr.customer_id = su.id LEFT JOIN db1.cloth cl ON cl.id = tr.cloth_id WHERE tr.state = 1")
     IPage<Transactions> selectPageRu(IPage<Transactions> page, @Param(Constants.WRAPPER) Wrapper<Transactions> queryWrapper);
 }
