@@ -19,9 +19,8 @@ import java.util.List;
  */
 public class CodeGenerator {
 
-    static String[] tables = {"cloth","user","customer","transactions"};
+    static String[] tables = {"cloth","user","customer","transactions","supplier"};
 
-//    static String[] tables = {"orders","order_pay","user","user_ext",""};
 
     public static void main(String[] args) throws Exception {
         for (String table : tables) {

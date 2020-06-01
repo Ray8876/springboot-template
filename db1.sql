@@ -11,7 +11,7 @@
  Target Server Version : 80020
  File Encoding         : 65001
 
- Date: 30/05/2020 15:58:17
+ Date: 01/06/2020 16:54:49
 */
 
 SET NAMES utf8mb4;
@@ -51,7 +51,7 @@ CREATE TABLE `customer` (
   `customer_moblie` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT '' COMMENT '客户电话',
   `customer_message` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT '' COMMENT '客户留言',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='客户表';
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='客户表';
 
 -- ----------------------------
 -- Records of customer
@@ -68,6 +68,27 @@ INSERT INTO `customer` VALUES (9, '', '', '', '');
 INSERT INTO `customer` VALUES (10, '1111', '', '', '');
 INSERT INTO `customer` VALUES (11, '12', '', '', '');
 INSERT INTO `customer` VALUES (12, '', '', '', '');
+INSERT INTO `customer` VALUES (13, '123', '123', '123', '123');
+COMMIT;
+
+-- ----------------------------
+-- Table structure for supplier
+-- ----------------------------
+DROP TABLE IF EXISTS `supplier`;
+CREATE TABLE `supplier` (
+  `id` int NOT NULL AUTO_INCREMENT COMMENT 'id',
+  `supplier_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT '' COMMENT '进货商名',
+  `supplier_address` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT '' COMMENT '进货商地址',
+  `supplier_moblie` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT '' COMMENT '进货商电话',
+  `supplier_message` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT '' COMMENT '备注',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='进货商表';
+
+-- ----------------------------
+-- Records of supplier
+-- ----------------------------
+BEGIN;
+INSERT INTO `supplier` VALUES (13, '123', '099999', '124', '24311');
 COMMIT;
 
 -- ----------------------------
